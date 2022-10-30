@@ -11,5 +11,6 @@ package-lock.json
 .DS_Store
 *.pem
 
-# env files
+# environment
+/.vscode
 *.env
