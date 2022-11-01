@@ -4,12 +4,14 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <>
       <ToastContainer />
       <BrowserRouter>
+        <Header />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />}></Route>

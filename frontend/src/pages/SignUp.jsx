@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { signup } from "../app/slices/auth/authSlice";
+import { reset, signup } from "../modules/auth/auth-slice";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ function SignUp() {
     if (isSuccess || user) {
       navigate("/");
     }
-    dispatch({ type: "store/reset" });
+    dispatch(reset());
   }, [user, isError, isSuccess, message, dispatch, navigate]);
 
   const onChange = (e) => {
@@ -35,7 +35,6 @@ function SignUp() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-
     dispatch(signup(formData));
   };
 
