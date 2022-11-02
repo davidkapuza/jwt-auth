@@ -2,9 +2,9 @@ import axios from "axios";
 
 const API_URL = "/api/auth/";
 
-// * Sign up user
+// * Register user
 
-const signup = async (userData) => {
+const register = async (userData) => {
   const responce = await axios.post(API_URL, userData);
 
   if (responce.data) {
@@ -14,9 +14,9 @@ const signup = async (userData) => {
   return responce.data;
 };
 
-// * Sign in user
+// * Login user
 
-const signin = async (userData) => {
+const login = async (userData) => {
   const responce = await axios.post(API_URL + "login", userData);
 
   if (responce.data) {
@@ -33,8 +33,8 @@ const logout = async () => {
 };
 
 const authService = {
-  signup,
-  signin,
+  register,
+  login,
   logout,
 };
 

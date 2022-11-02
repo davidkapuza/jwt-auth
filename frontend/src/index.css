@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #13131b;
 }
 
 code {
@@ -13,21 +12,15 @@ code {
     monospace;
 }
 
-.container {
-  max-width: 1440px;
-  min-height: 100vh;
-  width: 100%;
-  margin-inline: auto;
-  color: azure;
-}
-
-.gif-container {
+.giphy-embed {
+  margin-top: 100px;
   width: 100%;
   height: 0;
-  padding-bottom: 58%;
+  padding-bottom: 56%;
   position: relative;
 }
 
-.gif-container > iframe {
+.giphy-embed > [title="welcome-gif"] {
   position: absolute;
+  pointer-events: none;
 }
